@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click Event</title>
+    <meta charset="UTF-8">
+    <style>
+        /* Simple styling for clarity */
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #output {
+            margin-top: 15px;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Click the buttons below:</h2>
+
+    <!-- Buttons -->
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+
+    <!-- Output paragraph -->
+    <p id="output"></p>
+
+    <script>
+        // Get references to elements
+        const output = document.getElementById("output");
+
+        // Function to handle button clicks
+        function handleClick(buttonNumber) {
+            output.textContent = `You clicked Button ${buttonNumber}`;
+        }
+
+        // Attach event listeners
+        document.getElementById("btn1").addEventListener("click", () => handleClick(1));
+        document.getElementById("btn2").addEventListener("click", () => handleClick(2));
+        document.getElementById("btn3").addEventListener("click", () => handleClick(3));
+    </script>
+</body>
+</html>
